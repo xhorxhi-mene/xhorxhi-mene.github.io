@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PWeb Booking System</title>
+<meta name="description" content="Sistema di prenotazione per un salone di parrucchiere — progetto universitario, voto 30/30.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="top-inner">
+      <a class="back-link" href="./index.html">← Portfolio</a>
+      <div class="brand"><span class="dot"></span>xhorxhi&nbsp;mene<span class="mono" style="color:var(--muted); font-weight:500;">.dev</span></div>
+    </div>
+  </header>
+
+  <main class="wrap" style="padding:0;">
+    <section class="hero" style="border-top:none; padding-top:52px;">
+      <p class="eyebrow">progetto universitario</p>
+      <h1>PWeb Booking System</h1>
+      <p class="lede">
+        Sistema di gestione prenotazioni per un salone di parrucchiere, sviluppato come progetto finale
+        del corso di Programmazione Web all'Università di Pisa. I clienti si registrano e prenotano
+        appuntamenti online; lo staff gestisce prenotazioni, clienti e no-show da una dashboard dedicata.
+      </p>
+      <div class="badge-row">
+        <span class="badge grade">Voto 30/30</span>
+        <span class="badge private">Repository privata</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">01</span><h2>Funzionalità</h2></div>
+      <div class="cols">
+        <div class="feat-card">
+          <h3>Lato cliente</h3>
+          <ul>
+            <li>Registrazione e login con validazione server-side</li>
+            <li>Prenotazione appuntamenti con scelta del servizio</li>
+            <li>Area personale per gestire le prenotazioni e il profilo</li>
+          </ul>
+        </div>
+        <div class="feat-card">
+          <h3>Lato amministratore</h3>
+          <ul>
+            <li>Dashboard con tutti gli appuntamenti in arrivo</li>
+            <li>Gestione clienti</li>
+            <li>Blacklist per i no-show ripetuti ("ghost booking")</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">02</span><h2>Sicurezza</h2></div>
+      <ul class="sec-list">
+        <li>Prepared statements (<code>mysqli</code>) contro SQL injection</li>
+        <li>Verifica token CSRF sui form di autenticazione (login, registrazione, cambio password)</li>
+        <li>Timeout di sessione dopo 30 minuti di inattività</li>
+        <li>Controllo "ghost session" — invalida le sessioni legate a utenti eliminati</li>
+        <li>Validazione server-side degli input (es. formato email)</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">03</span><h2>Stack tecnico</h2></div>
+      <div class="stack-groups">
+        <div>
+          <h3>Backend</h3>
+          <div class="chip-row"><span class="chip">PHP</span><span class="chip">mysqli (procedurale)</span></div>
+        </div>
+        <div>
+          <h3>Database</h3>
+          <div class="chip-row"><span class="chip">MySQL</span></div>
+        </div>
+        <div>
+          <h3>Frontend</h3>
+          <div class="chip-row"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript vanilla</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">04</span><h2>Struttura del progetto</h2></div>
+      <pre class="tree"><span class="c">├──</span> index.php              <span class="c"># Homepage</span>
+<span class="c">├──</span> css/                    <span class="c"># Fogli di stile</span>
+<span class="c">├──</span> js/                     <span class="c"># Script lato client</span>
+<span class="c">├──</span> php/
+<span class="c">│   ├──</span> admin/               <span class="c"># Dashboard, gestione clienti e blacklist</span>
+<span class="c">│   ├──</span> cliente/             <span class="c"># Area cliente, prenotazioni, profilo</span>
+<span class="c">│   └──</span> script/              <span class="c"># Autenticazione, sessione, connessione DB</span>
+<span class="c">├──</span> manuale.html            <span class="c"># Manuale utente</span>
+<span class="c">└──</span> mene_db.sql             <span class="c"># Schema del database</span></pre>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-num">05</span><h2>Nota</h2></div>
+      <div class="note">
+        Questo è il progetto universitario originale. Una versione evoluta di questo sistema
+        è oggi <strong>in produzione</strong> per un salone di parrucchiere reale (Eduard Hairstyle).
+      </div>
+    </section>
+
+    <footer>
+      <div class="foot-left mono">Xhorxhi Mene — Università di Pisa, Ingegneria Informatica</div>
+      <a class="foot-cta" href="./index.html">← Torna al portfolio</a>
+    </footer>
+  </main>
+</div>
+</body>
+</html>
