@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xhorxhi-mene.github.io/sitemap.xml
